@@ -8,10 +8,6 @@ pipeline {
     stage('First Stage') {
       steps {
         echo 'Test Message'
-                        sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
       }
     }
     stage('Second Stage') {
