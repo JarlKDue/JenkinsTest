@@ -1,17 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Start') {
+    stage('First Stage') {
       steps {
         echo 'Test Message'
       }
     }
-    stage('Second') {
+    stage('Second Stage') {
       steps {
         echo 'Second'
       }
     }
-    stage('Done') {
+    stage('Finishing Stage') {
       steps {
         echo 'Done'
       }
