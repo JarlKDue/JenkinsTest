@@ -13,26 +13,7 @@
 
     <packaging>war</packaging>
     <name>Rest :: Module</name>
-    <description>POM for Rest Module. Defines all Dependencies and Plugins.</description>
-         <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.miracle</groupId>
-    <artifactId>miracle-base</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <modules>
-        <module>rest</module>
-    </modules>
-    <packaging>pom</packaging>
-    <name>Base :: Parent</name>
-    <description>Parent POM. Defines all Dependencies and Plugins.</description>
-    <properties>
-        <version.maven.compiler.plugin>3.7.0</version.maven.compiler.plugin>
-        <cxf.version>3.1.10</cxf.version>
-    </properties>
+         <description>POM for Rest Module. Defines all Dependencies and Plugins.</description>
     <profiles>
     <!-- Profile with online repositories required by Fuse Service Works -->
     <profile>
