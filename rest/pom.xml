@@ -40,6 +40,8 @@
           </snapshots>
         </repository>
       </repositories>
+          </profile>
+         </profiles>
     <dependencies>
         <!--Camel-->
         <dependency>
