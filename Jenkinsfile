@@ -1,19 +1,29 @@
 pipeline {
-    agent any
-    tools {
-        maven 'maven'
-        jdk 'jdk8'
+    agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v /root/.m2:/root/.m2'
+        }
     }
     stages {
-        stage ('Initialize') {
+        stage('Build') {
             steps {
-                echo 'Initializing'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
-
-        stage ('Build') {
+        stage('Test') {
             steps {
-                bat 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Deliver') { 
+            steps {
+                sh './jenkins/scripts/deliver.sh' 
             }
         }
     }
