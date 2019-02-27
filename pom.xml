@@ -17,37 +17,30 @@
         <version.maven.compiler.plugin>3.7.0</version.maven.compiler.plugin>
         <cxf.version>3.1.10</cxf.version>
     </properties>
-    <profiles>
-    <!-- Profile with online repositories required by Fuse Service Works -->
-    <profile>
-    <id>fsw-online-repos</id>
     <repositories>
         <repository>
-            <id>jboss-ga-repository</id>
-            <url>http://maven.repository.redhat.com/techpreview/all</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+          <id>jboss-ga-repository</id>
+          <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
         </repository>
         <repository>
-            <id>jboss-public-repository</id>
-            <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+          <id>jboss-public-repository</id>
+          <url>http://repository.jboss.org/nexus/content/repositories/public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
         </repository>
-    </repositories>
-    </profile>
-    </profiles>
+      </repositories>
     <dependencyManagement>
         <dependencies>
-
             <!--Bom EAP https://mvnrepository.com/artifact/org.jboss.bom/eap-runtime-artifacts/7.1.0.GA-->
             <dependency>
                 <groupId>org.jboss.bom</groupId>
