@@ -19,6 +19,7 @@ pipeline {
         stage('Deliver') { 
             steps {
             echo 'Delivery for JBOSS'
+                                sh 'mvn clean install'
             }
         }
     }
