@@ -111,15 +111,28 @@
           <name>${project.build.finalName}.${project.packaging}</name>
         </configuration>
         <executions>
-            <execution>
-                <id>deploy-jar</id>
-                <phase>install</phase>
-                <goals>
-                    <goal>deploy</goal>
-                </goals>
-            </execution>
+          <!-- Undeploy the application on clean -->
+          <execution>
+            <id>undeploy</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>undeploy</goal>
+            </goals>
+            <configuration>
+              <ignoreMissingDeployment>true</ignoreMissingDeployment>
+            </configuration>
+          </execution>
+
+          <!-- Deploy the application on install -->
+          <execution>
+            <id>deploy</id>
+            <phase>install</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
         </executions>
-    </plugin>
+      </plugin>
             </plugins>
         </pluginManagement>
     </build>
