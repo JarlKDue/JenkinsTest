@@ -19,7 +19,7 @@ pipeline {
         stage('Deliver') { 
             steps {
             echo 'Delivery for JBOSS'
-                                sh 'mvn wildfly:deploy'
+                                sh 'mvn wildfly:deploy -e'
             }
         }
     }
