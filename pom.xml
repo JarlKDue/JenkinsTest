@@ -103,7 +103,7 @@
         <artifactId>wildfly-maven-plugin</artifactId>
         <version>1.1.0.Final</version>
         <configuration>
-          <hostname>localhost</hostname>
+          <hostname>o.o.o.o</hostname>
           <port>9990</port>
           <username>jboss-local-admin</username>
           <password>jboss-local-admin-password</password>
