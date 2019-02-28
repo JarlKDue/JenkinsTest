@@ -11,7 +11,7 @@ public class RestRouteBuilder extends RouteBuilder {
     restConfiguration().component("servlet").componentProperty("servletName", "com.miracle.rest.RestServlet");
 
     rest().produces("application/json")
-            .get("/health").route().id("HealthCheck").transform().constant("{ \"status\": \"Alive!\" }");
+            .get("/health").route().id("HealthCheck").transform().constant("{ \"status\": \"I am still alive!\" }");
 
   }
 }
