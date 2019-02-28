@@ -19,6 +19,38 @@
     <profile>
       <id>fsw-online-repos</id>
       <repositories>
+                <repository>
+      <id>repository.jboss.org_thirdparty-releases</id>
+      <name>JBoss.org third party releases repository</name>
+      <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>repository.jboss.org_thirdparty-uploads</id>
+      <name>JBoss.org third party uploads repository</name>
+      <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-uploads</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>jboss-eap</id>
+      <url>file:///path/to/repo/jboss-eap-7.0.0.GA-maven-repository/maven-repository</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
         <repository>
           <id>jboss-ga-repository</id>
           <url>http://maven.repository.redhat.com/techpreview/all</url>
