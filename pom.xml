@@ -104,9 +104,9 @@
         <version>1.1.0.Final</version>
         <configuration>
           <hostname>192.168.56.1</hostname>
-          <port>9990</port>
+          <port>9992</port>
           <username>admin</username>
-          <password>Admin#70365</password>
+          <password>admin</password>
           <jboss-home>local-jboss-home</jboss-home>
           <name>${project.build.finalName}.${project.packaging}</name>
         </configuration>
